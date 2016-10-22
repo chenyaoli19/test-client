@@ -1,0 +1,58 @@
+<!--<div>-->
+  <!--<h2>Create new user</h2>-->
+  <!--<form>-->
+    <!--<p>-->
+      <!--<label class="user-label">First name:</label>-->
+      <!--<input type="text" ng-model="userFirstName">-->
+    <!--</p>-->
+    <!--<p>-->
+      <!--<label class="user-label">Last name:</label>-->
+      <!--<input type="text" ng-model="userLasttName">-->
+    <!--</p>-->
+    <!--<p>-->
+      <!--<label class="user-label">Email:</label>-->
+      <!--<input type="text" ng-model="userEmail">-->
+    <!--</p>-->
+    <!--<p>-->
+      <!--<label class="user-label">Food:</label>-->
+      <!--<input type="text" ng-model="userFood">-->
+    <!--</p>-->
+    <!--<p>-->
+      <!--<label class="user-label">Age:</label>-->
+      <!--<input type="text" ng-model="userAge">-->
+    <!--</p>-->
+    <!--<button ng-click="addUser()">Add User</button>-->
+  <!--</form>-->
+<!--</div>-->
+<!--<hr>-->
+<div>
+  <div class="left">
+    <h3>All users</h3>
+    <ul ng-repeat="user in users">
+      <li>
+        <div>
+          <p><b>{{user.firstName+" "+user.lastName}}</b></p>
+          <p>Food: {{user.food}}</p>
+          <p>Age: {{user.age}}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="left">
+    <h3>Find user by food:</h3>
+    <input type="text" ng-model="food">
+    <div class="food-user" ng-repeat="user in usersByFood">
+      <h4>{{user.firstName+" "+user.lastName}}</h4>
+    </div>
+  </div>
+  <div class="left">
+    <h3>Find user by age group:</h3>
+    <label>age between</label>
+    <input class="age-input" type="text" ng-model="lowerAge">
+    <label>and</label>
+    <input class="age-input" type="test" ng-model="upperAge">
+    <div class="food-user" ng-repeat="user in usersByAge">
+      <h4>{{user.firstName+" "+user.lastName}}</h4>
+    </div>
+  </div>
+</div>
