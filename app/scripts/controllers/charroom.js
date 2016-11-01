@@ -9,11 +9,11 @@
  */
 angular.module('myAppApp')
   .controller('CharroomCtrl', function ($scope,charRoomService) {
-    //$scope.chatHistory = [];
     $scope.chat = '';
     $scope.submitChat = function(){
       charRoomService.submitChat($scope.chat).then(function(response){
         getChatHistory();
+        $scope.chat = '';
       });
     };
 
